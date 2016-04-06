@@ -1,6 +1,6 @@
 # Uni.IoC
 
-`Uni.IoC` is a simple, fast dependency injection library.
+`Uni.IoC` is a simple and fast dependency injection library.
 
 ##How To Install It?
 Install from `Nuget`, you should write Package Manager Console below code and `Uni.IoC` will be installed automatically.
