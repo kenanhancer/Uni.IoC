@@ -23,7 +23,7 @@ var shape = container.Resolve<IShape>();
 ```
 
 ##Resolving different concrete types which implement same interface
-If you have different concrete types which imlement same interface, you can register them with different names.
+If you have different concrete types which imlement same interface, you can register them with different names. As you can see below sample code, there is one `IShape` interface and two concrete types `Circle`, `Square` which use that interface.
 
 
 ```csharp
