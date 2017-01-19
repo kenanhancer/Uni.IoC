@@ -64,7 +64,7 @@ var square = container.Resolve<IShape>("Square");
 ```
 
 ##Register and Resolve Complex types
-
+There are two concrete types which implement ILoginService interface and those have constructor which has parameter named loginValidator. UniIoC can register and resolve these complex types as below. I will use following code for use cases.
 
 ```csharp
 public interface ILoginService
