@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54D6A38C-F659-4F3B-9991-E8F3B4EB7801}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Uni.IoC</RootNamespace>
+    <AssemblyName>Uni.IoC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\SharedAssemblies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Uni.Extensions">
+      <HintPath>..\..\SharedAssemblies\Uni.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\IInterceptor.cs" />
+    <Compile Include="Entities\IInvocation.cs" />
+    <Compile Include="Entities\InnerInterceptor.cs" />
+    <Compile Include="Entities\RegisterBehaviorEnum.cs" />
+    <Compile Include="Utility\ProxyInstanceFactory.cs" />
+    <Compile Include="Entities\IUniIoC.cs" />
+    <Compile Include="Entities\LifeCycleEnum.cs" />
+    <Compile Include="Entities\IProxyType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities\ProxyMethod.cs" />
+    <Compile Include="Entities\IoCConstants.cs" />
+    <Compile Include="Utility\ProxyTypeFactory.cs" />
+    <Compile Include="Entities\ServiceDescription.cs" />
+    <Compile Include="Entities\StandardInvocation.cs" />
+    <Compile Include="UniIoC.cs" />
+    <Compile Include="Utility\UniTypeFactory.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF $(ConfigurationName) == Debug GOTO CopyDll
+IF $(ConfigurationName) == Release GOTO CopyDllRelease
+EXIT
+     
+:CopyDll
+ATTRIB ..\..\..\..\SharedAssemblies\"$(TargetFileName)" -R
+COPY "$(TargetPath)" ..\..\..\..\SharedAssemblies\ /Y
+ATTRIB ..\..\..\..\SharedAssemblies\"$(TargetFileName)" +R
+EXIT
+
+:CopyDllRelease
+ATTRIB ..\..\..\..\SharedAssemblies\"$(TargetFileName)" -R
+COPY "$(TargetPath)" ..\..\..\..\SharedAssemblies\ /Y
+ATTRIB ..\..\..\..\SharedAssemblies\"$(TargetFileName)" +R</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,7 @@
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC\bin\Debug\Uni.IoC.dll
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC\bin\Debug\Uni.IoC.pdb
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC\bin\Debug\Uni.Extensions.dll
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC\obj\Debug\Uni.IoC.dll
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC\obj\Debug\Uni.IoC.pdb
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC\obj\Debug\Uni.IoC.csprojResolveAssemblyReference.cache

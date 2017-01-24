@@ -1,0 +1,8 @@
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC.Test\bin\Debug\Uni.IoC.Test.dll
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC.Test\bin\Debug\Uni.IoC.Test.pdb
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC.Test\bin\Debug\Uni.IoC.dll
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC.Test\bin\Debug\Uni.Extensions.dll
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC.Test\bin\Debug\Uni.IoC.pdb
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC.Test\obj\Debug\Uni.IoC.Test.dll
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC.Test\obj\Debug\Uni.IoC.Test.pdb
+C:\Users\kenan\Documents\Visual Studio 2015\Projects\Uni\Uni\Uni.IoC.Test\obj\Debug\Uni.IoC.Test.csprojResolveAssemblyReference.cache
