@@ -2,14 +2,14 @@
 
 `Uni.IoC` is a simple and fast dependency injection library.
 
-##How To Install It?
+## How To Install It?
 Install from `Nuget`, you should write Package Manager Console below code and `Uni.IoC` will be installed automatically.
 ```
 Install-Package Uni.IoC
 ```
 By the way, you can also reach `Uni.IoC` `NuGet` package from https://www.nuget.org/packages/Uni.IoC/ address.
 
-##How Do You Use It?
+## How Do You Use It?
 It is easy to use. Let's have a look at a simple example.
 
 Firstly, UniIoC object is created named container. And register a interface to a concrete type. Lastly, resolve instance according to registered interface as shown below code.
@@ -22,7 +22,7 @@ container.Register(ServiceCriteria.For<IShape>().ImplementedBy<Circle>());
 var shape = container.Resolve<IShape>();
 ```
 
-##Register and Resolve concrete types without interface
+## Register and Resolve concrete types without interface
 You can register concrete types without interface as below;
 
 ```csharp
@@ -35,7 +35,7 @@ IShape circle = container.Resolve<Circle>();
 IShape square = container.Resolve<Square>();
 ```
 
-##Resolving different concrete types which implement same interface
+## Resolving different concrete types which implement same interface
 If you have different concrete types which imlement same interface, you can register them with different names. As you can see below sample code, there is one `IShape` interface and two concrete types `Circle`, `Square` which use that interface.
 
 
@@ -63,7 +63,7 @@ var circle = container.Resolve<IShape>("Circle");
 var square = container.Resolve<IShape>("Square");
 ```
 
-##Register and Resolve Complex types
+## Register and Resolve Complex types
 There are two concrete types which implement ILoginService interface and those have constructor which has parameter named loginValidator. UniIoC can register and resolve these complex types as below. I will use following code for use cases.
 
 ```csharp
